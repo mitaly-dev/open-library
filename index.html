@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body >
+    <header>
+        <div class="navbar bg-base-100 flex justify-between shadow-md px-28">
+            <div class="">
+              <a class="text-2xl font-bold" href="#">OPEN LIBRARY 📚</a>
+            </div>
+            <div class="relative w-7/12 m-auto">
+                <input id="search-value" type="text" placeholder="Search" class="input input-bordered rounded-full w-full outline-none" />
+                <button id="search-btn" class="btn btn-ghost btn-circle absolute right-0 top-0 outline-none bg-[#ddd]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class=" h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </button>
+              </div>
+            <div class="dropdown dropdown-end text-right">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img src="https://placeimg.com/80/80/people" />
+                  </div>
+                </label>
+              </div>
+             
+          </div>
+    </header>
+    <main class="w-10/12 m-auto py-20">
+        <section>
+            <h3 id="total-book" class="text-center text-4xl font-semibold text-green-700 pb-6 border-b-2">Search your Book 📖</h3>
+            <h3 id="nan-value" class="text-3xl font-semibold text-red-600 mt-16 text-center hidden">Plase provide us a book name</h3>
+            <h3 id="available-value" class="text-3xl font-semibold text-red-600 mt-16 text-center hidden">Sorry...Not Available</h3>
+           <div id="progress" class="text-center py-28 hidden"> <progress class="progress w-56"></progress> </div>
+            <div id="book-container" class="py-8 grid grid-cols-3 gap-9">
+              
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/script.js"></script>
+
+    
+
+<!-- modal-->
+<input type="checkbox" id="my-modal-4" class="modal-toggle" />
+<label for="my-modal-4" class="modal cursor-pointer">
+  <label class="modal-box relative" for="">
+    <h3 class="text-lg font-bold">Author Details :</h3>
+   <div id="modal-field">
+
+   </div>
+  </label>
+</label>
+</body>
+</html>
